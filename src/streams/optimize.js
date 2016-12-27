@@ -35,6 +35,9 @@ module.exports = function () {
 
     // if a specific output format is specified, set it
     if (image.outputFormat) {
+      if (image.outputFormat === 'jpeg') {
+        r.background('#FFFFFF').flatten();
+      }
       r.toFormat(image.outputFormat);
     }
 
